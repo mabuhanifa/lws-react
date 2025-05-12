@@ -1,3 +1,11 @@
+import { useState } from "react";
+import Counter from "./components/Counter";
+
 export default function App() {
-  return <div className="bg-red-500">App</div>;
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <Counter count={count} setCount={setCount} />
+    </div>
+  );
 }
